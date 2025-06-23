@@ -1,9 +1,9 @@
 
 def thing():
-    print ("I will tell you a joke")
+    print("I will tell you a joke")
     name= input("tell me you name=")
-    print ("no not in mood dude")
-    print ("sorry"+" "+name+" "+"no joke is here hahah dont call me again")
+    print("no not in mood dude")
+    print("sorry"+" "+name+" "+"no joke is here hahah dont call me again")
     
 answer=str(input("do you wanna hear jokes:Y/N="))
 if answer== 'y' or answer=='y':
