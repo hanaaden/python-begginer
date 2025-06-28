@@ -1,0 +1,13 @@
+scope refers a region  of program where variable is accesibl
+python to determine the variable uses this rule LEGB ~ local , enclosing , global , build-in
+= the variable that is defined inside the function is only accesible inside withun that function 
+   called local variable 
+=this scope is observed when you ave nested function called enclosing 
+= variable defined at the top of script or module are called global scope
+   means variable is accesible any function
+= variable that is defined like preassigned in python functions like print() and len() 
+  is called biuld-in scope
+
+  z.real
+z is object real is an attribite of object z
+namespace is system that ensures unique name like variable function and other things  
