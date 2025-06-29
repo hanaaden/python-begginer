@@ -11,3 +11,13 @@ python to determine the variable uses this rule LEGB ~ local , enclosing , globa
   z.real
 z is object real is an attribite of object z
 namespace is system that ensures unique name like variable function and other things  
+
+class object support 2 kinds of operations :
+- attribite reference 
+- instantiation
+
+MYclass.i = are valid attribute reference 
+x= MYclass() = class instantiation uses function notation just pretend
+the class object is perameters functions that return new instatn 
+x=MYclass() = creates new instance of class and assigns this object 
+to local variable x
