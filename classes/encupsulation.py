@@ -29,13 +29,53 @@ emp.work()
 # Private Member: Accessible within the class
 # Protected Member: Accessible within the class and its sub-classes
 
+#protected 
+print("printong the protected class")
+class Protected:
+    def __init__(self):
+        self._age = 89
+class Subclass(Protected):
+    def display_age(self):
+        print(self._age)
+obj = Subclass() 
+obj.display_age() 
+# Explanation
+# protected attribute _age thisattribute is prefixed with single underscore the subcalss 
+# inherits from protected with in this subclass we can still
+# access the peotected variable 
+# - methid of display_age within the subclass accesses the protected attribute 
+# and print it value 
+# means protected Attributes can be accessed within the class and the subclass 
+
+
 #privite 
-class Employ:
-    def __init__(self,name,salary):
-        #public member
-        self.name =name
-        #privite member
-        self._salary = salary
+class private:
+    def __init__(self):
+        self.__salary = 1000
         
-emp = Employ("jesse" , 1000)
-print("salary", emp._salary)
+    def salary(self):
+        return self.__salary
+        
+obj = private()
+print(obj.salary())
+# the attribute is privite the plic method provides only the way to access the private variable
+# from outside is safe;y returns the value 
+# trying to access the provate attribute directky obj.__salry will result AttributeError
+
+#getters and setters 
+class go:
+    def __init__(self, age = 0):
+        self._age = age
+        
+    #gettter method 
+    def get_age(self):
+        return self._age
+    
+    #stter method
+    def set_age(self , x):
+        self._age = x
+appear = go()
+#setting the age using setter
+appear.set_age(22)
+print(appear.get_age())
+print(appear._age)

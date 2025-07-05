@@ -21,3 +21,15 @@ x= MYclass() = class instantiation uses function notation just pretend
 the class object is perameters functions that return new instatn 
 x=MYclass() = creates new instance of class and assigns this object 
 to local variable x
+
+how encupsulation works 
+1.  data hiding : the varaibles(attribite) are kept provote or protected means
+they are not accesible directly outside the class
+
+2: access through methods : methods act as interface through which external code interact
+with the data stored in the variables 
+getter and setters are common methods used tp retrieve and update the value 
+
+3: control and security : the variables are only allowed to munupilated via mehods 
+
+
