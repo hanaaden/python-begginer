@@ -27,7 +27,7 @@ class car:
             return  "Brake activated" ,  self._speed - self._speed
     
 obj = car()
-obj.set_speed(20)
+obj.set_speed(209)
 print("the speed of the car is " , obj.get_speed())
 print(obj.accelerate())
 print(obj.brake())
@@ -49,6 +49,41 @@ class email:
 createmail = email()
 createmail.set_email("hana@gmail.com")
 print(createmail.get_email())
+
+#task 3
+class BankAccount:
+    def __init__(self , balance = 0):
+        self._balance = balance
+        
+    def get_balance(self):
+         return self._balance   
+     
+    def set_balance(self , Balance):
+        self._balance = Balance
+        
+    def deposit(self):
+        depositMoney= int(input("enter the deposited money?"))
+        if depositMoney < 0:
+            print("You can deposit")
+        else:
+            self._balance = self._balance+depositMoney
+            print(self._balance)
+            print("deposited successfully")
+        
+    def withdraw(self):
+        withdrawal = int(input("How much you wanna withdraw?"))
+        if withdrawal > self._balance:
+            print("insuficient balance") 
+        else:
+            self._balance = self._balance - withdrawal
+            print("withdraw successfull")
+        print("your current balance is:" , self._balance)
+balanceObj = BankAccount()
+balanceObj.set_balance(90)
+print(balanceObj.get_balance()) 
+balanceObj.deposit()
+balanceObj.withdraw() 
+        
         
 
     
