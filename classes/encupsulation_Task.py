@@ -51,38 +51,38 @@ createmail.set_email("hana@gmail.com")
 print(createmail.get_email())
 
 #task 3
-class BankAccount:
-    def __init__(self , balance = 0):
-        self._balance = balance
-        
-    def get_balance(self):
-         return self._balance   
+   class BankAccount:
+  def __init__(self , balance = 0):
+    self._balance = balance
+
+  def get_balance(self):
+    return self._balance
      
-    def set_balance(self , Balance):
-        self._balance = Balance
-        
-    def deposit(self):
-        depositMoney= int(input("enter the deposited money?"))
-        if depositMoney < 0:
-            print("You can deposit")
-        else:
-            self._balance = self._balance+depositMoney
-            print(self._balance)
-            print("deposited successfully")
-        
-    def withdraw(self):
-        withdrawal = int(input("How much you wanna withdraw?"))
-        if withdrawal > self._balance:
-            print("insuficient balance") 
-        else:
-            self._balance = self._balance - withdrawal
-            print("withdraw successfull")
-        print("your current balance is:" , self._balance)
-balanceObj = BankAccount()
-balanceObj.set_balance(90)
-print(balanceObj.get_balance()) 
-balanceObj.deposit()
-balanceObj.withdraw() 
+  def deposit(self, amount):
+      if amount < 0:
+          raise Exception("You can't deposit negative or zero amount.")
+      else:
+          self._balance = self._balance + amount
+          return self.get_balance()
+
+  def withdraw(self, amount):
+      if amount > self._balance:
+          raise Exception("Insuficient balance.") 
+      else:
+          self._balance = self._balance - amount
+          return self.get_balance()
+
+
+account = BankAccount()
+
+try:
+  account.deposit(50)
+  print('My balance is', account.get_balance()) 
+  account.withdraw(55)
+  print('My balance is', account.get_balance())
+except Exception as e:
+  print(e)
+  exit(1)
         
         
 
