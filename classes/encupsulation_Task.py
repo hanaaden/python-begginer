@@ -51,8 +51,10 @@ createmail.set_email("hana@gmail.com")
 print(createmail.get_email())
 
 #task 3
-   class BankAccount:
+ class BankAccount:
   def __init__(self , balance = 0):
+    if balance < 0:
+      raise Exception("Can't start account with negative balance.")
     self._balance = balance
 
   def get_balance(self):
@@ -61,20 +63,18 @@ print(createmail.get_email())
   def deposit(self, amount):
       if amount < 0:
           raise Exception("You can't deposit negative or zero amount.")
-      else:
-          self._balance = self._balance + amount
-          return self.get_balance()
+      self._balance = self._balance + amount
+      return self.get_balance()
 
   def withdraw(self, amount):
       if amount > self._balance:
           raise Exception("Insuficient balance.") 
-      else:
-          self._balance = self._balance - amount
-          return self.get_balance()
+      self._balance = self._balance - amount
+      return self.get_balance()
 
 
-account = BankAccount()
-
+account = BankAccount(-100)
+ 
 try:
   account.deposit(50)
   print('My balance is', account.get_balance()) 
@@ -83,7 +83,6 @@ try:
 except Exception as e:
   print(e)
   exit(1)
-        
         
 
     
