@@ -1,36 +1,43 @@
 #Task #1
-class car:
-    def __init__(self , speed = 0):
-        self._speed = speed
-        
+class Car:
+    def __init__(self, speed = 0):
+      if speed < 0 or speed > 200:
+        raise Exception("invalid speed")
+      self._speed = speed
+
     #gettter method 
     def get_speed(self):
-        if self._speed < 0 or self._speed > 200:
-            return "Invalid speed"
-        else:
-            return self._speed
-            
-    #stter method
-    def set_speed(self , speedcar):
-        self._speed = speedcar
-        
-    def accelerate(self):
-        if self._speed < 0 or self._speed > 200:
-            return "Invalid speed"
-        else:
-            return "car accelarated to " , self._speed + 100
-        
-    def brake(self):
-        if self._speed < 0 or self._speed > 200:
-            return "Invalid speed"
-        else:
-            return  "Brake activated" ,  self._speed - self._speed
-    
-obj = car()
-obj.set_speed(209)
-print("the speed of the car is " , obj.get_speed())
-print(obj.accelerate())
-print(obj.brake())
+      return self._speed
+
+    def accelerate(self, speedup):
+        if speedup < 0:
+            raise Exception("Invalid acceleration")
+          
+        if (self._speed + speedup) > 200:
+            raise Exception("Overspeeding after acceleration")
+      
+        self._speed = self._speed + speedup
+         
+
+    def brake(self, speeddown):
+      if speeddown > 0:
+        raise Exception("Invalid Brake")
+
+      if (self._speed + speeddown) < 0:
+        raise Exception("invalid brake")
+
+      self._speed = self._speed + speeddown
+
+try:
+  obj = Car(10)
+  print("the speed of the car is " , obj.get_speed())
+  obj.accelerate(90)
+  print("the speed of the car is " , obj.get_speed())
+  obj.brake(-8)
+  print("the current speed of the car is " , obj.get_speed())
+except Exception as e:
+  print(e)
+  exit(1)
 
 import re
 
@@ -51,39 +58,38 @@ createmail.set_email("hana@gmail.com")
 print(createmail.get_email())
 
 #task 3
-class BankAccount:
-    def __init__(self , balance = 0):
-        self._balance = balance
-        
-    def get_balance(self):
-         return self._balance   
+ class BankAccount:
+  def __init__(self , balance = 0):
+    if balance < 0:
+      raise Exception("Can't start account with negative balance.")
+    self._balance = balance
+
+  def get_balance(self):
+    return self._balance
      
-    def set_balance(self , Balance):
-        self._balance = Balance
-        
-    def deposit(self):
-        depositMoney= int(input("enter the deposited money?"))
-        if depositMoney < 0:
-            print("You can deposit")
-        else:
-            self._balance = self._balance+depositMoney
-            print(self._balance)
-            print("deposited successfully")
-        
-    def withdraw(self):
-        withdrawal = int(input("How much you wanna withdraw?"))
-        if withdrawal > self._balance:
-            print("insuficient balance") 
-        else:
-            self._balance = self._balance - withdrawal
-            print("withdraw successfull")
-        print("your current balance is:" , self._balance)
-balanceObj = BankAccount()
-balanceObj.set_balance(90)
-print(balanceObj.get_balance()) 
-balanceObj.deposit()
-balanceObj.withdraw() 
-        
+  def deposit(self, amount):
+      if amount < 0:
+          raise Exception("You can't deposit negative or zero amount.")
+      self._balance = self._balance + amount
+      return self.get_balance()
+
+  def withdraw(self, amount):
+      if amount > self._balance:
+          raise Exception("Insuficient balance.") 
+      self._balance = self._balance - amount
+      return self.get_balance()
+
+
+account = BankAccount(-100)
+ 
+try:
+  account.deposit(50)
+  print('My balance is', account.get_balance()) 
+  account.withdraw(55)
+  print('My balance is', account.get_balance())
+except Exception as e:
+  print(e)
+  exit(1)
         
 
     
