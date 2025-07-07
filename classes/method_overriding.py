@@ -3,6 +3,52 @@
 # when methid in subclass hase same name the same parameter or signiture and same return type 
 # as methid in supercalss then the methid in subclass is said override
 
+class Animal:
+  def __init__(self, name):
+      self.name = name 
+    
+  def speak(self):
+      print(self.name, 'spoke')
+
+class Dog(Animal):
+   
+  def speak(self):
+      super().speak()
+      print(self.name, 'barks')
+
+
+
+dog = Dog('Tom')
+dog.speak()
+
+# Circle is-a shape
+# Rectangle is-a shape
+
+class Shape:
+  def area(self): # Default
+    return None
+
+class Circle (Shape):
+  def __init__(self, radius):
+    self.radius = radius
+
+  def area(self): # Specific
+    return 3.14 * self.radius * self.radius
+
+class Rectangle (Shape):
+  def __init__(self, length, width):
+    self.length = length
+    self.width = width
+
+  def area(self): # Specific
+    return self.length * self.width
+
+c = Circle(10)
+print(c.area())
+
+r = Rectangle(10, 20)
+print(r.area())
+
 class Parent():
     def __init__(self):
         self.value = "inside parent"
