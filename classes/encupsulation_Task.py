@@ -58,7 +58,7 @@ createmail.set_email("hana@gmail.com")
 print(createmail.get_email())
 
 #task 3
- class BankAccount:
+class BankAccount:
   def __init__(self , balance = 0):
     if balance < 0:
       raise Exception("Can't start account with negative balance.")
