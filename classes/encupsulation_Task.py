@@ -1,36 +1,43 @@
 #Task #1
-class car:
-    def __init__(self , speed = 0):
-        self._speed = speed
-        
+class Car:
+    def __init__(self, speed = 0):
+      if speed < 0 or speed > 200:
+        raise Exception("invalid speed")
+      self._speed = speed
+
     #gettter method 
     def get_speed(self):
-        if self._speed < 0 or self._speed > 200:
-            return "Invalid speed"
-        else:
-            return self._speed
-            
-    #stter method
-    def set_speed(self , speedcar):
-        self._speed = speedcar
-        
-    def accelerate(self):
-        if self._speed < 0 or self._speed > 200:
-            return "Invalid speed"
-        else:
-            return "car accelarated to " , self._speed + 100
-        
-    def brake(self):
-        if self._speed < 0 or self._speed > 200:
-            return "Invalid speed"
-        else:
-            return  "Brake activated" ,  self._speed - self._speed
-    
-obj = car()
-obj.set_speed(209)
-print("the speed of the car is " , obj.get_speed())
-print(obj.accelerate())
-print(obj.brake())
+      return self._speed
+
+    def accelerate(self, speedup):
+        if speedup < 0:
+            raise Exception("Invalid acceleration")
+          
+        if (self._speed + speedup) > 200:
+            raise Exception("Overspeeding after acceleration")
+      
+        self._speed = self._speed + speedup
+         
+
+    def brake(self, speeddown):
+      if speeddown > 0:
+        raise Exception("Invalid Brake")
+
+      if (self._speed + speeddown) < 0:
+        raise Exception("invalid brake")
+
+      self._speed = self._speed + speeddown
+
+try:
+  obj = Car(10)
+  print("the speed of the car is " , obj.get_speed())
+  obj.accelerate(90)
+  print("the speed of the car is " , obj.get_speed())
+  obj.brake(-8)
+  print("the current speed of the car is " , obj.get_speed())
+except Exception as e:
+  print(e)
+  exit(1)
 
 import re
 
