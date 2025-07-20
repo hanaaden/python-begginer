@@ -1,0 +1,80 @@
+class Animal:
+  def speak(self):
+    pass
+
+class Dog(Animal):
+  def speak(self):
+    return "woof"
+
+class Cat(Animal):
+  def speak(self):
+    return "meow"
+    
+def animal(animals):
+  print(animals.speak())
+    
+
+dog= Dog()
+cat = Cat()
+
+animal(dog)
+animal(cat)
+
+  
+
+1. Inheritance
+
+class Dog(Animal):
+class Cat(Animal):
+
+	•	Dog and Cat classes inherit from 
+the Animal base class.
+	•	This is inheritance because the child 
+classes gain behavior from the parent class.
+
+
+
+2. Method Overriding
+
+def speak(self):
+    return "woof"  # in Dog
+
+def speak(self):
+    return "meow"  # in Cat
+
+	•	Both Dog and Cat override the speak() method defined (as a placeholder) in the Animal class.
+	•	This is method overriding, which is a core part of polymorphism.
+
+
+
+3. Polymorphism
+
+def animal(animals):
+    print(animals.speak())
+
+	•	You pass different objects
+ (Dog and Cat) to the same function animal(), 
+and it calls their specific speak() method.
+	•	This is polymorphism — same interface, 
+different behavior.
+
+
+
+4. Abstraction
+
+class Animal:
+    def speak(self):
+        pass
+
+	•	The Animal class defines the interface
+ speak() but does not implement it — 
+only says it “should” be there.
+	•	This hides implementation details and 
+forces subclasses to define their 
+own version.
+	•	This is abstraction — showing essential 
+features, 
+hiding the details.
+
+
+
