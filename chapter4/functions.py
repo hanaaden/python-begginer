@@ -1,3 +1,19 @@
+#POAITIONAL PARAMETERS
+def add(a, b):
+    return a + b
+print(add(3, 5))  # Output: 8
+# Keyword Arguments:
+def ad(a,b):
+  print(ad(b=5, a=3))  # Output: 8
+#Default Arguments:
+def greet(name="Guest"):
+    print(f"Hello, {name}!")
+greet()  # Output: Hello, Guest!
+# arbitrary argumetn 
+def summarize(*args):
+    return sum(args)
+print(summarize(1, 2, 3, 4))  # Output: 10
+
 
 def thing():
     print("I will tell you a joke")
