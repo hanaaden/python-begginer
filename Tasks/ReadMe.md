@@ -44,27 +44,32 @@ Script mode is very suitable for writing long pieces of code.
 ### Interactive mode 
 is based on this ideology only. In the interactive mode as we enter a command and press enter, the very next step we get the output.
 Means we use the command line
-## What happens to sys.argv when you run a script using the -c and -m options?
-
 ## 6: Write a script that prints the name of the script and any command-line arguments passed to it. 
 
 ## 7: Try running a Python one-liner using python -c to print numbers from 1 to 5 using a loop.
 
 ## 8: How does Python handle type conversion between integers and floating point numbers in expressions?
+float(): Converts an integer or a number-like string to a float.
+int(): Converts a float or a number-like string to an integer. When converting a float to an integer, the decimal part is truncated (removed), not rounded.
 
 ## 9: What is the significance of the underscore variable _ in interactive mode?
+it automatically stores the result of the last evaluated expression.
 
 ## 10: Write a program that takes a user input string and counts how many vowels it contains.
    you will find the code in counter.py
 
-## Create a list of numbers, then, square each number, keep only the ones greater than 50, print the result.
+## 11: Create a list of numbers, then, square each number, keep only the ones greater than 50, print the result.
    you will find the code in lister.py
 
-## What is the purpose of the else clause in a loop, and how does it behave differently from the if statement’s else?
+## 12: What is the purpose of the else clause in a loop, and how does it behave differently from the if statement’s else?
+The else keyword is used in conditional statements (if statements), and decides what to do if the condition is False
 
+## 13: Describe a scenario where continue would be more useful than break in a loop.
+When the continue statement is executed, the loop doesn't terminate but skips to the next iteration.
+This is useful when you want to skip over certain conditions but keep the loop running.
 
-## Describe a scenario where continue would be more useful than break in a loop.
-
-
-## Simulate a simple login system: Give the user 3 chances to enter the correct password, use a while loop and break to stop early if the password is correct, print “Access Denied” if all attempts are used.
+## 14: Simulate a simple login system: Give the user 3 chances to enter the correct password, use a while loop and break to stop early if the password is correct, print “Access Denied” if all attempts are used.
  you will find the code in password.py
+
+## 15: What happens to sys.argv when you run a script using the -c and -m options?
+
