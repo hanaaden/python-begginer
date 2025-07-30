@@ -30,6 +30,8 @@ C arrays are typically homogeneous, meaning they can only store elements of a si
 
 
 ## 3: Research and write a Python script that prints the current date and time using a built-in module 
+we first use a module that we import - import datetime
+the code is in te date.py
 
 ## 4: Imagine you are renaming thousands of photo files. Write pseudocode for how Python could help automate this.
 
@@ -62,7 +64,19 @@ it automatically stores the result of the last evaluated expression.
    you will find the code in lister.py
 
 ## 12: What is the purpose of the else clause in a loop, and how does it behave differently from the if statement’s else?
-The else keyword is used in conditional statements (if statements), and decides what to do if the condition is False
+else in loops is used to be executed at the end means when the condition of the loop becomes false 
+
+The else block just after for/while is executed only when the loop is NOT terminated by a break statement.
+`l = [9,8,7]`
+`n = len(l)`
+`i = 0`
+`while i < n:`
+   ` if l[i] % 2 == 0:`
+        `print("we found even")`
+        `break`
+   ` i += 1`
+`else:`
+   ` print("we did not find even ")`
 
 ## 13: Describe a scenario where continue would be more useful than break in a loop.
 When the continue statement is executed, the loop doesn't terminate but skips to the next iteration.
