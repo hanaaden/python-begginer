@@ -35,5 +35,15 @@ print(my_student.student_name())
 print(my_student.student_age())
     
 
+class House :
+    def __init__(self , address , owner ):
+        self.address = address
+        self.owner = owner 
+        
+    def displayer(self) :
+        display =  f"the address of the house is:  {self.address} and the owner is :   {self.owner}"
+        return display
+the_house = House(123 , "John")
+print(the_house.displayer())
         
     
