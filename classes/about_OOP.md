@@ -1,11 +1,11 @@
-# 🐍 Object-Oriented Programming (OOP) in Python
+#  Object-Oriented Programming (OOP) in Python
 
 Object-Oriented Programming (OOP) is a programming paradigm that organizes software design around **objects**, rather than functions or logic.  
 It allows us to model real-world entities, making code more modular, reusable, and easier to maintain.
 
 ---
 
-## 🧩 What is a Class?
+##  What is a Class?
 
 A **class** is a blueprint or template for creating objects.  
 It defines what data (attributes) and behaviors (methods) its objects will have.  
@@ -14,7 +14,7 @@ Think of a class as a plan for building something — like an architect’s draw
 
 ---
 
-## 🧱 What is an Object?
+##  What is an Object?
 
 An **object** is an instance of a class.  
 When a class is created, it doesn’t hold real data yet — it just describes what the data will look like.  
@@ -24,7 +24,7 @@ For example, a class might describe a “Book,” while each object represents a
 
 ---
 
-## ⚙️ Attributes and Methods
+##  Attributes and Methods
 
 - **Attributes** are the variables or data that belong to a class or object.  
   They describe the state or properties of an object.
@@ -36,7 +36,7 @@ Together, attributes and methods make up the structure and functionality of an o
 
 ---
 
-## 🔑 The Four Pillars of OOP
+##  The Four Pillars of OOP
 
 ### 1. Encapsulation
 Encapsulation is the concept of bundling data (attributes) and the methods that operate on that data into a single unit — the class.  
@@ -71,7 +71,7 @@ It allows programmers to work with simplified interfaces without worrying about 
 
 ---
 
-## 🧠 Why Use OOP?
+##  Why Use OOP?
 
 Object-Oriented Programming provides many benefits:
 - Organizes code into logical structures (classes and objects)  
@@ -82,7 +82,7 @@ Object-Oriented Programming provides many benefits:
 
 ---
 
-## 🧭 Summary
+##  Summary
 
 | Concept | Description | Purpose |
 |----------|--------------|----------|
@@ -95,7 +95,7 @@ Object-Oriented Programming provides many benefits:
 
 ---
 
-## 💬 Final Thought
+##  Final Thought
 
 Object-Oriented Programming is about **thinking in terms of objects** — things that have properties and behaviors.  
 It helps developers create systems that mirror the real world, making programs more intuitive, organized, and powerful.
@@ -104,7 +104,7 @@ It helps developers create systems that mirror the real world, making programs m
 
 ---
 
-### 📘 Keywords to Remember
+###  Keywords to Remember
 - **Class**
 - **Object**
 - **Attribute**
